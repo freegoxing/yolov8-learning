@@ -1,0 +1,23 @@
+[project]
+name = "yolov8"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+"torch",
+"torchvision",
+"ultralytics"
+]
+
+[tool.uv]
+prerelease = "allow"
+index-strategy = "unsafe-best-match"
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu130"
