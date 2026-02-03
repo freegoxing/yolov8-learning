@@ -1,35 +1,74 @@
-# YOLOv8 Learning / Tutorial
+# YOLOv8 & OpenCV Learning Repository
 
 ## Overview
 
-This repository contains my personal learning and experiments with YOLOv8 for object detection.
-It includes tutorials, dataset preparation, training, evaluation, and model deployment examples.
+This repository documents my hands-on learning process in computer vision, focusing on:
+
+- YOLOv8 — object detection workflows, parameter exploration, and result analysis
+- OpenCV — fundamental image processing techniques and experiments
+
+It combines code, notes, datasets, and generated artifacts to form a reproducible learning pipeline.
 
 ## Contents
 
 ```bash
-src/
-├── Yolo/        # YOLOv8 Python scripts (inference, parameter exploration, result analysis)
-├── OpenCV/     # OpenCV-based image / video processing demos
+.
+├── src/                # Source code
+│   ├── Yolo/           # YOLOv8 experiments and scripts
+│   └── OpenCV/         # Image processing notebooks
+│
+├── notebook/           # Structured learning notes (Markdown)
+│   ├── Yolo/
+│   └── OpenCV/
+│
+├── data/               # Input datasets (images / videos)
+│
+├── artifacts/          # Generated outputs from experiments
+│   ├── OpenCV/         # Processed images
+│   └── Yolo/           # Detection results
+│
+├── models/             # Model weights (e.g., yolov8n.pt)
+│
+├── runs/               # Ultralytics default output directory
+│
+├── pyproject.toml      # Dependency management (uv)
+└── README.md
 
-models/         # Model weights and checkpoints (optional, recommended via GitHub Releases)
-
-runs/           # YOLO output directory (predictions, visualizations, logs)
-
-notebook/
-├── Yolo/       # Markdown notes explaining YOLOv8 workflow, parameters, and results
-├── OpenCV/     # Notes and experiments related to OpenCV (optional / future)
 ```
+
+## Features
+
+- Reproducible YOLOv8 inference workflows
+- Parameter sensitivity experiments
+- OpenCV preprocessing demonstrations
+- Organized Markdown notes for theory + practice
+- Clean separation of data → code → artifacts
 
 ## Requirements
 
 - Python >= 3.12
 - torch, torchvision
 - ultralytics (YOLOv8)
-- OpenCV, matplotlib
+- OpenCV
+- matplotlib
+- jupyterlab
 
 Install dependencies:
 
 ```bash
 uv sync
+```
+
+## Quick Start
+
+Run a YOLO demo
+
+```bash
+uv run src/Yolo/01demo/main.py
+```
+
+Explore OpenCV Jupyter experiments
+
+```bash
+jupyter notebook src/OpenCV/
 ```
